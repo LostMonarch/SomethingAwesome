@@ -14,8 +14,8 @@ function [left_group, right_group, gain] = split_group_on_attribute(group, a)
        end    
     end
     % Display results
-    top_fraud    %#ok<NOPRT>
-    top_not_fraud   %#ok<NOPRT>
+    top_fraud;     %#ok<VUNUS>
+    top_not_fraud; %#ok<VUNUS>  
 
     % 'a' will determine the attribute lists we use
     if strcmp(a, 'volume_threshold')
@@ -66,10 +66,10 @@ function [left_group, right_group, gain] = split_group_on_attribute(group, a)
     right_not_fraud = classify_group(2);
     
     % Display results for sanity check
-    left_fraud      %#ok<NOPRT>
-    left_not_fraud  %#ok<NOPRT>
-    right_fraud     %#ok<NOPRT>
-    right_not_fraud %#ok<NOPRT>
+    left_fraud;      %#ok<VUNUS>
+    left_not_fraud;  %#ok<VUNUS>
+    right_fraud;     %#ok<VUNUS>
+    right_not_fraud; %#ok<VUNUS>
     
     % Finally, calculate the information gain of this split
     gain_vector = [top_fraud top_not_fraud left_fraud left_not_fraud right_fraud right_not_fraud];

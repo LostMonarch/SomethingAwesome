@@ -28,12 +28,12 @@ fraud = [4 5 6 7 8 9 21 22 23 24 25 26 27 28];
 not_fraud = [1 2 3 10 11 12 13 14 15 16 17 18 19 20 29 30];
 
 % Perform sanity checks - they should all be 30
-disp(length(volume_under) + length(volume_over));
-disp(length(volume_near) + length(volume_far));
-disp(length(vendor_in) + length(vendor_not_in));
-disp(length(location_in) + length(location_not_in));
-disp(length(frequency_under) + length(frequency_over));
-disp(length(frequency_near) + length(frequency_far));
-disp(length(online_under) + length(online_over));
-disp(length(online_greater) + length(online_less));
-disp(length(fraud) + length(not_fraud));
+%disp(length(volume_under) + length(volume_over));
+%disp(length(volume_near) + length(volume_far));
+%disp(length(vendor_in) + length(vendor_not_in));
+%disp(length(location_in) + length(location_not_in));
+%disp(length(frequency_under) + length(frequency_over));
+%disp(length(frequency_near) + length(frequency_far));
+%disp(length(online_under) + length(online_over));
+%disp(length(online_greater) + length(online_less));
+%disp(length(fraud) + length(not_fraud));
