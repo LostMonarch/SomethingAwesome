@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/Connor/Documents/COMP3441/src/somethingawesome/CustomerProfile.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/card.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/transaction.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/vendorType.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/TransactionHistory.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/Customer.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/Bank.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/FraudDetector.h -I/Users/Connor/Documents/COMP3441/src/somethingawesome/transactionTime.h 
+CXX_INCLUDES = -I/Users/Connor/Documents/COMP3441/sap/COMP6441/CustomerProfile.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/card.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/vendorType.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/TransactionHistory.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/Customer.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/Bank.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.h -I/Users/Connor/Documents/COMP3441/sap/COMP6441/transactionTime.h 
 

@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.6.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Connor/Documents/COMP3441/src/somethingawesome
+CMAKE_SOURCE_DIR = /Users/Connor/Documents/COMP3441/sap/COMP6441
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Connor/Documents/COMP3441/src/somethingawesome/build
+CMAKE_BINARY_DIR = /Users/Connor/Documents/COMP3441/sap/COMP6441/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Connor/Documents/COMP3441/src/somethingawesome/build/CMakeFiles /Users/Connor/Documents/COMP3441/src/somethingawesome/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles /Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Connor/Documents/COMP3441/src/somethingawesome/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
