@@ -28,6 +28,7 @@ class DecisionTree {
         bool classify(transaction t, Customer c);
         void addChild(bool left, DecisionTree * c);
     private:
+        bool classify_child(bool left, transaction t, Customer c);
         int nodeID;
         nodeTypeID typeID;
         vector<DecisionTree *> children;
