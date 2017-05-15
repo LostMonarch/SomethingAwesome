@@ -74,3 +74,14 @@ bool CustomerProfile::check_volume_distance(float v) {
         return FAR;
     }
 }
+
+// Check whether a given transaction time is under or over the customer's transaction frequency
+bool CustomerProfile::check_frequency_threshold(int dt) {
+    float timeDifference = (float) dt;
+
+    if(timeDifference <= averageFrequency) {
+        return UNDER;
+    } else {
+        return OVER;
+    }
+}

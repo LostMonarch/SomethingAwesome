@@ -20,6 +20,7 @@ class CustomerProfile {
         bool check_location_in_list(int p);
         bool check_volume_threshold(float v);
         bool check_volume_distance(float v);
+        bool check_frequency_threshold(int dt);
     private:
         int postCode;
         float averageSpend;
@@ -27,6 +28,7 @@ class CustomerProfile {
         float onlinePurchasePercentage;
         vector<vendorType> vendors;
         vector<int> postcodes;
+        int getlastDay();
 };
 
 #endif

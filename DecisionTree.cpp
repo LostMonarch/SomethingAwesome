@@ -148,7 +148,23 @@ bool decide_volumeDistance(transaction t, Customer c) {
 
 // Choose left child or right child based on frequency threshold (under, over)
 bool decide_frequencyThreshold(transaction t, Customer c) {
-    return false;    
+    CustomerProfile * profile = c.getProfile();
+    int day = t.day.day;
+    int lastDay = c.getLastDay();
+    int timeDifference = day - lastDay;
+    bool isUnder;
+
+    if(timeDifference < 0) {
+        timeDifference = timeDifference + 365;
+    }
+
+    isUnder = profile->check_frequency_threshold(timeDifference);
+
+    if(isUnder) {
+        return RIGHT;
+    } else {
+        return LEFT;
+    }
 }
 
 // Choose left child or right child based on frequency distance (near, far)

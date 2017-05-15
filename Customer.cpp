@@ -127,3 +127,8 @@ string Customer::vendorTypeToString(vendorType v) {
             return "UNKNOWN";
     }
 }
+
+// Get the value representing the date of the last transaction in this customer's transaction history
+int Customer::getLastDay() {
+    return history->getLastDay();
+}
