@@ -1,6 +1,12 @@
 // Implementation of the Decision Tree fraud detection class
 #include "DecisionTree.h"
 
+// For readability
+#define LEFT true
+#define RIGHT false
+#define FRAUD true
+#define NOT_FRAUD false
+
 // Function prototypes for decision routines based on each attribute
 bool decide_vendorType(transaction t, Customer c);
 bool decide_location(transaction t, Customer c);
@@ -64,10 +70,10 @@ bool DecisionTree::classify(transaction t, Customer c) {
             ret = classify_child(choose_child, t, c);
             break;
         case LEAF_FRAUD:
-            ret = true;
+            ret = FRAUD;
             break;
         case LEAF_NOT_FRAUD:
-            ret = false;
+            ret = NOT_FRAUD;
             break;
     }
     return ret;
@@ -82,17 +88,47 @@ bool DecisionTree::classify_child(bool left, transaction t, Customer c) {
 
 // Choose left child or right child based on vendor type (in list, not in list)
 bool decide_vendorType(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    vendorType v = t.vendor;
+    bool inList;
+
+    inList = profile->check_vendor_in_list(v);
+
+    if(inList) {
+        return LEFT;
+    } else {
+        return RIGHT;
+    }
 }
 
 // Choose left child or right child based on location (in list, not in list)
 bool decide_location(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    int location = t.postcode;
+    bool inList;
+
+    inList = profile->check_location_in_list(location);
+
+    if(inList) {
+        return LEFT;
+    } else {
+        return RIGHT;
+    }
 }
 
 // Choose left child or right child based on volume threshold (under, over)
 bool decide_volumeThreshold(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    float volume = (float) t.value;
+    bool isUnder;
+
+    isUnder = profile->check_volume_threshold(volume);
+
+    if(isUnder) {
+        return LEFT;
+    } else {
+        return RIGHT;
+    }
 }
 
 // Choose left child or right child based on volume distance (near, far)

@@ -16,6 +16,9 @@ class CustomerProfile {
         int getPostcode() { return postCode; };
         void update(transaction t);
         void fill(float spendAverage, float freqAverage, float onlinePercentage, vector<vendorType> &vendorList, vector<int> &codeList);
+        bool check_vendor_in_list(vendorType v);
+        bool check_location_in_list(int p);
+        bool check_volume_threshold(float v);
     private:
         int postCode;
         float averageSpend;
