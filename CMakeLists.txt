@@ -24,6 +24,7 @@ set(HEADERS
      Bank.h
      FraudDetector.h
      transactionTime.h
+     DecisionTree.h
 )
 
 # Include headers
