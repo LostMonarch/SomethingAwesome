@@ -19,6 +19,7 @@ class CustomerProfile {
         bool check_vendor_in_list(vendorType v);
         bool check_location_in_list(int p);
         bool check_volume_threshold(float v);
+        bool check_volume_distance(float v);
     private:
         int postCode;
         float averageSpend;

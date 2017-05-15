@@ -133,7 +133,17 @@ bool decide_volumeThreshold(transaction t, Customer c) {
 
 // Choose left child or right child based on volume distance (near, far)
 bool decide_volumeDistance(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    float volume = (float) t.value;
+    bool isNear;
+
+    isNear = profile->check_volume_distance(volume);
+
+    if(isNear) {
+        return LEFT;
+    } else {
+        return RIGHT;
+    }
 }
 
 // Choose left child or right child based on frequency threshold (under, over)
