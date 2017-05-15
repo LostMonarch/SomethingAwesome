@@ -21,6 +21,7 @@ class CustomerProfile {
         bool check_volume_threshold(float v);
         bool check_volume_distance(float v);
         bool check_frequency_threshold(int dt);
+        bool check_frequency_distance(int dt);
     private:
         int postCode;
         float averageSpend;

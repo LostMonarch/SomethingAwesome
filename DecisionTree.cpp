@@ -169,7 +169,23 @@ bool decide_frequencyThreshold(transaction t, Customer c) {
 
 // Choose left child or right child based on frequency distance (near, far)
 bool decide_frequencyDistance(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    int day = t.day.day;
+    int lastDay = c.getLastDay();
+    int timeDifference = day - lastDay;
+    bool isNear;
+
+    if(timeDifference < 0) {
+        timeDifference = timeDifference + 365;
+    }
+
+    isNear = profile->check_frequency_distance(timeDifference);
+
+    if(isNear) {
+        return LEFT;
+    } else {
+        return RIGHT;
+    }
 }
 
 // Choose left child or right child based on online threshold (under, over)

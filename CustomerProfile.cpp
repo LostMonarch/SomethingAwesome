@@ -3,7 +3,8 @@
 #include <math.h>
 
 // For readability
-#define VOLUME_DISTANCE_THRESHOLD_PERCENTAGE 40 // Somewhat arbitrary value, could be optimised further
+#define VOLUME_DISTANCE_THRESHOLD_PERCENTAGE 40 // Somewhat arbitrary value, should be optimised further
+#define FREQUENCY_DISTANCE_THRESHOLD_PERCENTAGE 47 // Somewhat arbitrary value, should me optimised further
 
 #define IN_LIST true
 #define NOT_IN_LIST false
@@ -83,5 +84,19 @@ bool CustomerProfile::check_frequency_threshold(int dt) {
         return UNDER;
     } else {
         return OVER;
+    }
+}
+
+// Check whether a given transaction frequency is 'near' the customer's average or 'far' from the customer's average
+bool CustomerProfile::check_frequency_distance(int dt) {
+    float difference = fabs((float) dt - averageFrequency);
+    float distance_percentage = (difference / averageFrequency) * 100;
+
+    if(distance_percentage <= FREQUENCY_DISTANCE_THRESHOLD_PERCENTAGE) {
+        // The transaction frequency is 'near' the customer's average if it is within 47% of the average itself
+        return NEAR;
+    } else {
+        // The transaction frequency is 'far' from the customer's average if it is more than 47% greater or less than the average itself
+        return FAR;
     }
 }
