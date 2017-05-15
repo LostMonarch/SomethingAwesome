@@ -4,5 +4,9 @@
 // Fraud Detector initialisation method - create a new fraud detector with specified type
 FraudDetector::FraudDetector(detectorTypeID i) {
     typeID = i;
-    tree = new DecisionTree();
+}
+
+// Set the Fraud Detector's decision tree - the one it will use to make classifications
+FraudDetector::setTree(DecisiionTree * t) {
+    tree = t;
 }

@@ -12,6 +12,7 @@ using namespace std;
 
 class Bank {
     public:
+        Bank(detectorTypeID id);
         void customersFromFile(string f);
         void learnAboutCustomers(string f);
         void trainDetectorFromFile(string f);
@@ -32,7 +33,7 @@ class Bank {
         void assignTransaction(transaction t);
 
         unordered_map<int, Customer> customers;
-        FraudDetector detector;
+        FraudDetector * detector;
 };
 
 #endif

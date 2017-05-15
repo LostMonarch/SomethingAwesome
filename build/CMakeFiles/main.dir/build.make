@@ -177,13 +177,63 @@ CMakeFiles/main.dir/CustomerProfile.cpp.o.provides: CMakeFiles/main.dir/Customer
 CMakeFiles/main.dir/CustomerProfile.cpp.o.provides.build: CMakeFiles/main.dir/CustomerProfile.cpp.o
 
 
+CMakeFiles/main.dir/FraudDetector.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../FraudDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/FraudDetector.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/FraudDetector.cpp.o -c /Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.cpp
+
+CMakeFiles/main.dir/FraudDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/FraudDetector.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.cpp > CMakeFiles/main.dir/FraudDetector.cpp.i
+
+CMakeFiles/main.dir/FraudDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/FraudDetector.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.cpp -o CMakeFiles/main.dir/FraudDetector.cpp.s
+
+CMakeFiles/main.dir/FraudDetector.cpp.o.requires:
+
+.PHONY : CMakeFiles/main.dir/FraudDetector.cpp.o.requires
+
+CMakeFiles/main.dir/FraudDetector.cpp.o.provides: CMakeFiles/main.dir/FraudDetector.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/FraudDetector.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/FraudDetector.cpp.o.provides
+
+CMakeFiles/main.dir/FraudDetector.cpp.o.provides.build: CMakeFiles/main.dir/FraudDetector.cpp.o
+
+
+CMakeFiles/main.dir/DecisionTree.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../DecisionTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/DecisionTree.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/DecisionTree.cpp.o -c /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp
+
+CMakeFiles/main.dir/DecisionTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/DecisionTree.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp > CMakeFiles/main.dir/DecisionTree.cpp.i
+
+CMakeFiles/main.dir/DecisionTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/DecisionTree.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp -o CMakeFiles/main.dir/DecisionTree.cpp.s
+
+CMakeFiles/main.dir/DecisionTree.cpp.o.requires:
+
+.PHONY : CMakeFiles/main.dir/DecisionTree.cpp.o.requires
+
+CMakeFiles/main.dir/DecisionTree.cpp.o.provides: CMakeFiles/main.dir/DecisionTree.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DecisionTree.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/DecisionTree.cpp.o.provides
+
+CMakeFiles/main.dir/DecisionTree.cpp.o.provides.build: CMakeFiles/main.dir/DecisionTree.cpp.o
+
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/Bank.cpp.o" \
 "CMakeFiles/main.dir/Customer.cpp.o" \
 "CMakeFiles/main.dir/TransactionHistory.cpp.o" \
-"CMakeFiles/main.dir/CustomerProfile.cpp.o"
+"CMakeFiles/main.dir/CustomerProfile.cpp.o" \
+"CMakeFiles/main.dir/FraudDetector.cpp.o" \
+"CMakeFiles/main.dir/DecisionTree.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -193,9 +243,11 @@ main: CMakeFiles/main.dir/Bank.cpp.o
 main: CMakeFiles/main.dir/Customer.cpp.o
 main: CMakeFiles/main.dir/TransactionHistory.cpp.o
 main: CMakeFiles/main.dir/CustomerProfile.cpp.o
+main: CMakeFiles/main.dir/FraudDetector.cpp.o
+main: CMakeFiles/main.dir/DecisionTree.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +260,8 @@ CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Bank.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Customer.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/TransactionHistory.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/CustomerProfile.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/FraudDetector.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/DecisionTree.cpp.o.requires
 
 .PHONY : CMakeFiles/main.dir/requires
 

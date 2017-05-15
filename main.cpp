@@ -5,7 +5,7 @@
 #define PRINT_SUMMARY 1
 
 int main(int argc, char* argv[]) {
-    Bank * b = new Bank();
+    Bank * b = new Bank(DECISION_TREE);
 
     // Indicate that the fraud detection system is starting
     cout << "Starting credit card fraud detector...\n";
@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     b->learnAboutCustomers(argv[2]);
 
     // Construct the system's decision tree
-    
+
 
     return 0;
 }

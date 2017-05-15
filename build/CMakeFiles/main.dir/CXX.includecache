@@ -62,11 +62,19 @@ vector
 transaction.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 
+/Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp
+DecisionTree.h
+/Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.h
+
 /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.h
 transaction.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 Customer.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/Customer.h
+
+/Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.cpp
+FraudDetector.h
+/Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.h
 DecisionTree.h

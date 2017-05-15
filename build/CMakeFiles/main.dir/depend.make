@@ -28,6 +28,27 @@ CMakeFiles/main.dir/CustomerProfile.cpp.o: ../transaction.h
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../vendorType.h
 
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../Customer.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../CustomerProfile.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../DecisionTree.cpp
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../DecisionTree.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../TransactionHistory.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../card.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../transaction.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../transactionTime.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../vendorType.h
+
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../Customer.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../CustomerProfile.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../DecisionTree.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../FraudDetector.cpp
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../FraudDetector.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../TransactionHistory.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../card.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../transaction.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../transactionTime.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../vendorType.h
+
 CMakeFiles/main.dir/TransactionHistory.cpp.o: ../TransactionHistory.cpp
 CMakeFiles/main.dir/TransactionHistory.cpp.o: ../TransactionHistory.h
 CMakeFiles/main.dir/TransactionHistory.cpp.o: ../transaction.h

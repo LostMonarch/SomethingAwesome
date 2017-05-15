@@ -10,6 +10,11 @@
 
 using namespace std;
 
+// Create a new Bank with a specified fraud detection system
+Bank::Bank(detectorTypeID id) {
+    detector = new FraudDetector(id);
+}
+
 // Split a string by a given delimiter
 vector<string> Bank::splitRegex(string &s, string delim) {
     regex rgx(delim);

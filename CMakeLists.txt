@@ -12,6 +12,8 @@ set(SOURCES
     Customer.cpp
     TransactionHistory.cpp
     CustomerProfile.cpp
+    FraudDetector.cpp
+    DecisionTree.cpp
 )
 
 set(HEADERS

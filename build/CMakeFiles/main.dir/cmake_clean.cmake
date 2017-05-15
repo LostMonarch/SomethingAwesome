@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Customer.cpp.o"
   "CMakeFiles/main.dir/TransactionHistory.cpp.o"
   "CMakeFiles/main.dir/CustomerProfile.cpp.o"
+  "CMakeFiles/main.dir/FraudDetector.cpp.o"
+  "CMakeFiles/main.dir/DecisionTree.cpp.o"
   "main.pdb"
   "main"
 )

@@ -204,6 +204,60 @@ CustomerProfile.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CustomerProfile.cpp.s
 .PHONY : CustomerProfile.cpp.s
 
+DecisionTree.o: DecisionTree.cpp.o
+
+.PHONY : DecisionTree.o
+
+# target to build an object file
+DecisionTree.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DecisionTree.cpp.o
+.PHONY : DecisionTree.cpp.o
+
+DecisionTree.i: DecisionTree.cpp.i
+
+.PHONY : DecisionTree.i
+
+# target to preprocess a source file
+DecisionTree.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DecisionTree.cpp.i
+.PHONY : DecisionTree.cpp.i
+
+DecisionTree.s: DecisionTree.cpp.s
+
+.PHONY : DecisionTree.s
+
+# target to generate assembly for a file
+DecisionTree.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/DecisionTree.cpp.s
+.PHONY : DecisionTree.cpp.s
+
+FraudDetector.o: FraudDetector.cpp.o
+
+.PHONY : FraudDetector.o
+
+# target to build an object file
+FraudDetector.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/FraudDetector.cpp.o
+.PHONY : FraudDetector.cpp.o
+
+FraudDetector.i: FraudDetector.cpp.i
+
+.PHONY : FraudDetector.i
+
+# target to preprocess a source file
+FraudDetector.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/FraudDetector.cpp.i
+.PHONY : FraudDetector.cpp.i
+
+FraudDetector.s: FraudDetector.cpp.s
+
+.PHONY : FraudDetector.s
+
+# target to generate assembly for a file
+FraudDetector.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/FraudDetector.cpp.s
+.PHONY : FraudDetector.cpp.s
+
 TransactionHistory.o: TransactionHistory.cpp.o
 
 .PHONY : TransactionHistory.o
@@ -276,6 +330,12 @@ help:
 	@echo "... CustomerProfile.o"
 	@echo "... CustomerProfile.i"
 	@echo "... CustomerProfile.s"
+	@echo "... DecisionTree.o"
+	@echo "... DecisionTree.i"
+	@echo "... DecisionTree.s"
+	@echo "... FraudDetector.o"
+	@echo "... FraudDetector.i"
+	@echo "... FraudDetector.s"
 	@echo "... TransactionHistory.o"
 	@echo "... TransactionHistory.i"
 	@echo "... TransactionHistory.s"
