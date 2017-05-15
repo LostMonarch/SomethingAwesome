@@ -9,22 +9,25 @@
 using namespace std;
 
 typedef enum nodeType {
-    VENDOR_TYPE;
-    LOCATION;
-    ONLINE_THRESHOLD;
-    ONLINE_CHANGE;
-    VOLUME_THRESHOLD;
-    VOLUME_DISTANCE;
-    FREQUENCY_THRESHOLD;
-    FREQUENCY_DISTANCE;
+    VENDOR_TYPE,
+    LOCATION,
+    ONLINE_THRESHOLD,
+    ONLINE_CHANGE,
+    VOLUME_THRESHOLD,
+    VOLUME_DISTANCE,
+    FREQUENCY_THRESHOLD,
+    FREQUENCY_DISTANCE
 } nodeTypeID;
 
 class DecisionTree {
     public:
-        virtual bool classify(transaction t, Customer c);
+        DecisionTree(int nID, nodeTypeID tID);
+        virtual bool classify(transaction t, Customer c) { return true; };
+        void addChild(bool left_right, DecisionTree * c);
     private:
         int nodeID;
         nodeTypeID typeID;
+        vector<DecisionTree *> children;
 };
 
 #endif

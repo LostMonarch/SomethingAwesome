@@ -2,6 +2,8 @@
 #ifndef FRAUD_DETECTOR_H_
 #define FRAUD_DETECTOR_H_
 
+#include "DecisionTree.h"
+
 using namespace std;
 
 typedef enum detectors {
@@ -11,8 +13,9 @@ typedef enum detectors {
 
 class FraudDetector {
     public:
-        //virtual void detect();
+        FraudDetector(detectorTypeID i);
     private:
+        DecisionTree * tree;
         detectorTypeID typeID;
 };
 
