@@ -4,6 +4,8 @@
 #include "card.h"
 #include <string>
 
+#define DISPLAY_PROFILING_SUMMARY 0
+
 #ifndef CUSTOMER_H_
 #define CUSTOMER_H_
 

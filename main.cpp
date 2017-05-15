@@ -1,8 +1,9 @@
 // Behavioural credit card fraud detector - main routine
 #include <iostream>
 #include "Bank.h"
+#include "constructTree.h"
 
-#define PRINT_SUMMARY 1
+#define PRINT_SUMMARY 0
 
 int main(int argc, char* argv[]) {
     Bank * b = new Bank(DECISION_TREE);
@@ -24,7 +25,7 @@ int main(int argc, char* argv[]) {
     b->learnAboutCustomers(argv[2]);
 
     // Construct the system's decision tree
-
+    constructTree();
 
     return 0;
 }

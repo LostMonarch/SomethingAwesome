@@ -16,14 +16,17 @@ typedef enum nodeType {
     VOLUME_THRESHOLD,
     VOLUME_DISTANCE,
     FREQUENCY_THRESHOLD,
-    FREQUENCY_DISTANCE
+    FREQUENCY_DISTANCE,
+    LEAF_FRAUD,
+    LEAF_NOT_FRAUD
 } nodeTypeID;
 
+// Decision Tree defines a single node in the tree - the root of the tree is referred to as 'the tree' but is actually just another node
 class DecisionTree {
     public:
         DecisionTree(int nID, nodeTypeID tID);
-        virtual bool classify(transaction t, Customer c) { return true; };
-        void addChild(bool left_right, DecisionTree * c);
+        bool classify(transaction t, Customer c);
+        void addChild(bool left, DecisionTree * c);
     private:
         int nodeID;
         nodeTypeID typeID;

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp" "/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/main.dir/DecisionTree.cpp.o"
   "/Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.cpp" "/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/main.dir/FraudDetector.cpp.o"
   "/Users/Connor/Documents/COMP3441/sap/COMP6441/TransactionHistory.cpp" "/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/main.dir/TransactionHistory.cpp.o"
+  "/Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.cpp" "/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/main.dir/constructTree.cpp.o"
   "/Users/Connor/Documents/COMP3441/sap/COMP6441/main.cpp" "/Users/Connor/Documents/COMP3441/sap/COMP6441/build/CMakeFiles/main.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
@@ -26,6 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../FraudDetector.h"
   "../transactionTime.h"
   "../DecisionTree.h"
+  "../constructTree.h"
   )
 
 # Targets to which this target links.

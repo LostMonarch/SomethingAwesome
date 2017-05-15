@@ -55,6 +55,9 @@ CMakeFiles/main.dir/TransactionHistory.cpp.o
  /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/transactionTime.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/vendorType.h
+CMakeFiles/main.dir/constructTree.cpp.o
+ /Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.cpp
+ /Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.h
 CMakeFiles/main.dir/main.cpp.o
  /Users/Connor/Documents/COMP3441/sap/COMP6441/Bank.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/Customer.h
@@ -63,6 +66,7 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/Connor/Documents/COMP3441/sap/COMP6441/FraudDetector.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/TransactionHistory.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/card.h
+ /Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/main.cpp
  /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
  /Users/Connor/Documents/COMP3441/sap/COMP6441/transactionTime.h

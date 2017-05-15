@@ -14,7 +14,7 @@ typedef enum detectors {
 class FraudDetector {
     public:
         FraudDetector(detectorTypeID i);
-        setTree(DecisionTree * t);
+        void setTree(DecisionTree * t);
     private:
         DecisionTree * tree;
         detectorTypeID typeID;

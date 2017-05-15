@@ -80,6 +80,7 @@ void Customer::profileCustomer() {
     averageFrequency = averageFrequency / getNumTransactions();
     onlinePurchasePercentage = (float) onlinePurchaseCounter / getNumTransactions();
 
+    #if DISPLAY_PROFILING_SUMMARY == 1
     // Summarise information for the user
     cout << "------------------------------\nProfiling Summary            |\n------------------------------\n";
     cout << "Customer: " << name << "\n";
@@ -98,6 +99,7 @@ void Customer::profileCustomer() {
          cout << to_string(c) << " ";
     }
     cout << "\n";
+    #endif
 
     // Finally, use the calculated information to populate the customer's profile
     profile->fill(averageSpend, averageFrequency, onlinePurchasePercentage, vendors, postCodes);

@@ -14,6 +14,7 @@ set(SOURCES
     CustomerProfile.cpp
     FraudDetector.cpp
     DecisionTree.cpp
+    constructTree.cpp
 )
 
 set(HEADERS
@@ -27,6 +28,7 @@ set(HEADERS
      FraudDetector.h
      transactionTime.h
      DecisionTree.h
+     constructTree.h
 )
 
 # Include headers

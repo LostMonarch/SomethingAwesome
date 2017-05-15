@@ -7,6 +7,6 @@ FraudDetector::FraudDetector(detectorTypeID i) {
 }
 
 // Set the Fraud Detector's decision tree - the one it will use to make classifications
-FraudDetector::setTree(DecisiionTree * t) {
+void FraudDetector::setTree(DecisionTree * t) {
     tree = t;
 }
