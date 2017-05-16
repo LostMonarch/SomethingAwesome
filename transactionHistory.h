@@ -14,6 +14,7 @@ class TransactionHistory {
         void check();
         vector<transaction> getHistory() { return history; };
         int getNumTransactions() { return history.size(); };
+        int getNumOnlineTransactions();
         int getLastDay();
     private:
         vector<transaction> history;

@@ -19,9 +19,10 @@ class Customer {
         void checkHistory();
         void profileCustomer();
         int getNumTransactions() { return history->getNumTransactions(); };
+        int getNumOnlineTransactions() { return history->getNumOnlineTransactions(); }
         CustomerProfile * getProfile() { return profile; };
         int getLastDay();
-        
+
     private:
         void updateProfile();
         void updateRisk();

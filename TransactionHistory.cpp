@@ -20,3 +20,15 @@ int TransactionHistory::getLastDay() {
         return 0;
     }
 }
+
+// Return the number of transactions in the customer's history which were made online
+int TransactionHistory::getNumOnlineTransactions() {
+    int numOnline = 0;
+
+    for(transaction t : history) {
+        if(t.online) {
+            numOnline = numOnline + 1;
+        }
+    }
+    return numOnline;
+}

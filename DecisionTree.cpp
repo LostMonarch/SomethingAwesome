@@ -6,6 +6,7 @@
 #define RIGHT false
 #define FRAUD true
 #define NOT_FRAUD false
+#define NUM_TRANSACTIONS_TRACK_ONLINE 15
 
 // Function prototypes for decision routines based on each attribute
 bool decide_vendorType(transaction t, Customer c);
@@ -195,5 +196,26 @@ bool decide_onlineThreshold(transaction t, Customer c) {
 
 // Choose left child or right child based on online change (increase, decrease)
 bool decide_onlineChange(transaction t, Customer c) {
-    return false;
+    CustomerProfile * profile = c.getProfile();
+    float currentPercentage = profile->getOnlinePercentage();
+    int currentNumTransactions = c.getNumTransactions();
+    int numOnline = c.getNumOnlineTransactions();
+
+    // If this transaction was made online, add one to the current number of online transactions for the customer
+    if(t.online) {
+        numOnline++;
+    }
+
+    // Account for new transaction
+    currentNumTransactions++;
+
+    // Calculate new percentage of transactions made online, accounting for newly received transaction
+    float newPercentage = (float) numOnline / (float) currentNumTransactions;
+
+    // Decide which child we need to choose
+    if(newPercentage <= currentPercentage) {
+        return RIGHT;
+    } else {
+        return LEFT;
+    }
 }

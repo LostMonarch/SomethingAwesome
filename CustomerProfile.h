@@ -14,6 +14,7 @@ class CustomerProfile {
     public:
         CustomerProfile(int p);
         int getPostcode() { return postCode; };
+        float getOnlinePercentage() { return onlinePurchasePercentage; };
         void update(transaction t);
         void fill(float spendAverage, float freqAverage, float onlinePercentage, vector<vendorType> &vendorList, vector<int> &codeList);
         bool check_vendor_in_list(vendorType v);
