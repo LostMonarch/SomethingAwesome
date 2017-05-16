@@ -285,33 +285,6 @@ TransactionHistory.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/TransactionHistory.cpp.s
 .PHONY : TransactionHistory.cpp.s
 
-constructTree.o: constructTree.cpp.o
-
-.PHONY : constructTree.o
-
-# target to build an object file
-constructTree.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/constructTree.cpp.o
-.PHONY : constructTree.cpp.o
-
-constructTree.i: constructTree.cpp.i
-
-.PHONY : constructTree.i
-
-# target to preprocess a source file
-constructTree.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/constructTree.cpp.i
-.PHONY : constructTree.cpp.i
-
-constructTree.s: constructTree.cpp.s
-
-.PHONY : constructTree.s
-
-# target to generate assembly for a file
-constructTree.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/constructTree.cpp.s
-.PHONY : constructTree.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -366,9 +339,6 @@ help:
 	@echo "... TransactionHistory.o"
 	@echo "... TransactionHistory.i"
 	@echo "... TransactionHistory.s"
-	@echo "... constructTree.o"
-	@echo "... constructTree.i"
-	@echo "... constructTree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

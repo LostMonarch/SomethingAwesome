@@ -1,7 +1,6 @@
 // Behavioural credit card fraud detector - main routine
 #include <iostream>
 #include "Bank.h"
-#include "constructTree.h"
 
 #define PRINT_SUMMARY 0
 
@@ -23,9 +22,6 @@ int main(int argc, char* argv[]) {
     // Learn about the behaviour of each customer using a list of transactions - also known as customer profiling
     cout << "Using transaction history to learn about customers...\n";
     b->learnAboutCustomers(argv[2]);
-
-    // Construct the system's decision tree
-    constructTree();
 
     return 0;
 }

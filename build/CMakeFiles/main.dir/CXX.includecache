@@ -100,21 +100,11 @@ transaction.h
 string
 -
 
-/Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.cpp
-constructTree.h
-/Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.h
-iostream
--
-
-/Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.h
-
 /Users/Connor/Documents/COMP3441/sap/COMP6441/main.cpp
 iostream
 -
 Bank.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/Bank.h
-constructTree.h
-/Users/Connor/Documents/COMP3441/sap/COMP6441/constructTree.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 vendorType.h
