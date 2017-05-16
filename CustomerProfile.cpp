@@ -4,7 +4,8 @@
 
 // For readability
 #define VOLUME_DISTANCE_THRESHOLD_PERCENTAGE 40 // Somewhat arbitrary value, should be optimised further
-#define FREQUENCY_DISTANCE_THRESHOLD_PERCENTAGE 47 // Somewhat arbitrary value, should me optimised further
+#define FREQUENCY_DISTANCE_THRESHOLD_PERCENTAGE 47 // Somewhat arbitrary value, should be optimised further
+#define NUM_TRANSACTIONS_IS_RECENT 5 // Somewhat arbitrary, should be optimised further
 
 #define IN_LIST true
 #define NOT_IN_LIST false
@@ -98,5 +99,31 @@ bool CustomerProfile::check_frequency_distance(int dt) {
     } else {
         // The transaction frequency is 'far' from the customer's average if it is more than 47% greater or less than the average itself
         return FAR;
+    }
+}
+
+// Check whether the percentage of online purchases made 'recently' by the customer is over the customer's overall percentage
+bool CustomerProfile::check_recent_online_purchase_percentage(transaction t, TransactionHistory * h) {
+    vector<transaction> recentHistory = h->getRecentHistory(NUM_TRANSACTIONS_IS_RECENT);
+
+    // We have the 'n' most recent transactions in the customer's transaction history, add the new transaction to the list
+    recentHistory.push_back(t);
+
+    // We now have all of the most recent transactions in the customer's transaction history, calculate the average online purchase percentage for this group
+    int num_online_group = 0;
+
+    for (transaction tn : recentHistory) {
+        if(tn.online) {
+            num_online_group++;
+        }
+    }
+
+    float group_percentage = (float) num_online_group / (float) recentHistory.size();
+
+    // Compare the percentage for this subgroup to the percentage overall
+    if(group_percentage <= onlinePurchasePercentage) {
+        return UNDER;
+    } else {
+        return OVER;
     }
 }

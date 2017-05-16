@@ -32,3 +32,9 @@ int TransactionHistory::getNumOnlineTransactions() {
     }
     return numOnline;
 }
+
+// Return the 'n' most recent transaction is this customer's transaction history
+vector<transaction> TransactionHistory::getRecentHistory(int howRecent) {
+    vector<transaction> recentHistory(history.end() - howRecent, history.end());
+    return recentHistory;
+}

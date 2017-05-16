@@ -10,6 +10,7 @@ CMakeFiles/main.dir/Bank.cpp.o: ../FraudDetector.h
 CMakeFiles/main.dir/Bank.cpp.o: ../TransactionHistory.h
 CMakeFiles/main.dir/Bank.cpp.o: ../card.h
 CMakeFiles/main.dir/Bank.cpp.o: ../transaction.h
+CMakeFiles/main.dir/Bank.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/Bank.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/Bank.cpp.o: ../vendorType.h
 
@@ -19,12 +20,14 @@ CMakeFiles/main.dir/Customer.cpp.o: ../CustomerProfile.h
 CMakeFiles/main.dir/Customer.cpp.o: ../TransactionHistory.h
 CMakeFiles/main.dir/Customer.cpp.o: ../card.h
 CMakeFiles/main.dir/Customer.cpp.o: ../transaction.h
+CMakeFiles/main.dir/Customer.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/Customer.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/Customer.cpp.o: ../vendorType.h
 
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../CustomerProfile.cpp
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../CustomerProfile.h
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../transaction.h
+CMakeFiles/main.dir/CustomerProfile.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/CustomerProfile.cpp.o: ../vendorType.h
 
@@ -35,6 +38,7 @@ CMakeFiles/main.dir/DecisionTree.cpp.o: ../DecisionTree.h
 CMakeFiles/main.dir/DecisionTree.cpp.o: ../TransactionHistory.h
 CMakeFiles/main.dir/DecisionTree.cpp.o: ../card.h
 CMakeFiles/main.dir/DecisionTree.cpp.o: ../transaction.h
+CMakeFiles/main.dir/DecisionTree.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/DecisionTree.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/DecisionTree.cpp.o: ../vendorType.h
 
@@ -46,6 +50,7 @@ CMakeFiles/main.dir/FraudDetector.cpp.o: ../FraudDetector.h
 CMakeFiles/main.dir/FraudDetector.cpp.o: ../TransactionHistory.h
 CMakeFiles/main.dir/FraudDetector.cpp.o: ../card.h
 CMakeFiles/main.dir/FraudDetector.cpp.o: ../transaction.h
+CMakeFiles/main.dir/FraudDetector.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/FraudDetector.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/FraudDetector.cpp.o: ../vendorType.h
 
@@ -68,6 +73,7 @@ CMakeFiles/main.dir/main.cpp.o: ../card.h
 CMakeFiles/main.dir/main.cpp.o: ../constructTree.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 CMakeFiles/main.dir/main.cpp.o: ../transaction.h
+CMakeFiles/main.dir/main.cpp.o: ../transactionHistory.h
 CMakeFiles/main.dir/main.cpp.o: ../transactionTime.h
 CMakeFiles/main.dir/main.cpp.o: ../vendorType.h
 

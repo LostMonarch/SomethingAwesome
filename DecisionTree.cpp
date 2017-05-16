@@ -6,7 +6,6 @@
 #define RIGHT false
 #define FRAUD true
 #define NOT_FRAUD false
-#define NUM_TRANSACTIONS_TRACK_ONLINE 15
 
 // Function prototypes for decision routines based on each attribute
 bool decide_vendorType(transaction t, Customer c);
@@ -191,7 +190,16 @@ bool decide_frequencyDistance(transaction t, Customer c) {
 
 // Choose left child or right child based on online threshold (under, over)
 bool decide_onlineThreshold(transaction t, Customer c) {
-    return false;
+    // How this is done: we take the n most recent transactions in the user's history, and comapre this with the user's overall online purchase percentage
+    CustomerProfile * profile = c.getProfile();
+    TransactionHistory * h = c.getHistory();
+    bool isUnder = profile->check_recent_online_purchase_percentage(t, h);
+
+    if(isUnder) {
+        return RIGHT;
+    } else {
+        return LEFT;
+    }
 }
 
 // Choose left child or right child based on online change (increase, decrease)

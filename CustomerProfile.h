@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "transaction.h"
+#include "transactionHistory.h"
 
 // CustomerProfile class declaration
 using namespace std;
@@ -23,6 +24,7 @@ class CustomerProfile {
         bool check_volume_distance(float v);
         bool check_frequency_threshold(int dt);
         bool check_frequency_distance(int dt);
+        bool check_recent_online_purchase_percentage(transaction t, TransactionHistory * h);
     private:
         int postCode;
         float averageSpend;

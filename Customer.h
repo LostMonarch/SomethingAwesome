@@ -22,6 +22,7 @@ class Customer {
         int getNumOnlineTransactions() { return history->getNumOnlineTransactions(); }
         CustomerProfile * getProfile() { return profile; };
         int getLastDay();
+        TransactionHistory * getHistory() { return history; };
 
     private:
         void updateProfile();

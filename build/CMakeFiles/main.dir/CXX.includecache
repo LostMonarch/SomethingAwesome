@@ -63,6 +63,8 @@ vector
 -
 transaction.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
+transactionHistory.h
+/Users/Connor/Documents/COMP3441/sap/COMP6441/transactionHistory.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.cpp
 DecisionTree.h
@@ -119,6 +121,12 @@ vendorType.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/vendorType.h
 transactionTime.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transactionTime.h
+
+/Users/Connor/Documents/COMP3441/sap/COMP6441/transactionHistory.h
+vector
+-
+transaction.h
+/Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transactionTime.h
 
