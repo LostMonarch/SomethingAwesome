@@ -26,12 +26,12 @@ class Bank {
         transaction newTransactionFromString(string &s);
         string onlineToString(bool o);
         string vendorTypeToString(vendorType v);
+        void displayTransactionSummary(transaction t);
+        void detect(transaction t);
     private:
-        void detect();
         vector<string> splitRegex(string &s, string delim);
         bool parseOnline(string &s);
         vendorType parseVendorType(string &s);
-        void displayTransactionSummary(transaction t);
         void assignTransaction(transaction t);
 
         unordered_map<int, Customer> customers;

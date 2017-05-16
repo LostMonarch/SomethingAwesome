@@ -208,8 +208,9 @@ void Bank::learnAboutCustomers(string f) {
 
 // Given a transaction, display a summary of it's parameters
 void Bank::displayTransactionSummary(transaction t) {
-    cout << "----------------------\n";
-    cout << "Transaction:\n";
+    cout << "--------------\n";
+    cout << "Transaction  |\n";
+    cout << "--------------\n";    
     cout << "card: " << to_string(t.card) << "\n";
     cout << "postcode: " << to_string(t.postcode) << "\n";
     cout << "volume: " << to_string(t.value) << "\n";
@@ -227,4 +228,9 @@ void Bank::assignTransaction(transaction t) {
 // Construct the Bank's decision tree
 void Bank::constructTree(vector<DecisionTree> &nodes) {
     detector->constructTree(nodes);
+}
+
+// Given a new transaction, decide whether or not it is fraudulent
+void Bank::detect(transaction t) {
+    
 }

@@ -5,10 +5,9 @@
 
 #define PRINT_SUMMARY 0
 #define SHOW_TREE 0
+#define DISPLAY_NEW_TRANSACTIONS 1
 #define EXIT 0
 #define RUNNING true
-
-void displayTransaction(transaction t);
 
 int main(int argc, char* argv[]) {
     Bank * b = new Bank(DECISION_TREE);
@@ -45,19 +44,12 @@ int main(int argc, char* argv[]) {
     while(RUNNING) {
         getline(cin, input);
         newTransaction = b->newTransactionFromString(input);
-        displayTransaction(newTransaction);
+        #if DISPLAY_NEW_TRANSACTIONS == 1
+        b->displayTransactionSummary(newTransaction);
+        #endif
+        b->detect(newTransaction);
         cout << "\nPlease enter a new transaction: \n";
     }
 
     return EXIT;
-}
-
-void displayTransaction(transaction t) {
-    cout << "\nNew transaction\n----------------\n";
-    cout << "Card: " << to_string(t.card) << "\n";
-    cout << "Location: " << to_string(t.postcode) << "\n";
-    cout << "Amount: " << to_string(t.value) << "\n";
-    cout << "Date: " << to_string(t.day.day) << "." << to_string(t.day.year) << "\n";
-    cout << "Time: " << to_string(t.when.hours) << ":" << to_string(t.when.minutes) << "\n";
-    cout << "\n";
 }
