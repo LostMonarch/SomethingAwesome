@@ -7,6 +7,7 @@
 #define SHOW_TREE 0
 #define DISPLAY_NEW_TRANSACTIONS 1
 #define EXIT 0
+#define ADD_AND_PROFILE 0
 #define RUNNING true
 
 int main(int argc, char* argv[]) {
@@ -54,6 +55,11 @@ int main(int argc, char* argv[]) {
         } else {
             cout << "Decision: NOT FRAUD\n";
         }
+        #if ADD_AND_PROFILE == 1
+        cout << "Updating cusomter profile with new transaction...\n"
+        b->assignTransaction(newTransaction);
+        b->updateCustomerProfile(newTransaction);
+        #endif
         cout << "\nPlease enter a new transaction: \n";
     }
 

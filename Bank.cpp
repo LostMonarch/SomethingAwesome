@@ -239,3 +239,9 @@ bool Bank::detect(transaction t) {
     // Make decision
     return detector->detect(t, c);
 }
+
+// Once a new transaction has been added, the customer's profiling information needs to be updated
+void Bank::updateCustomerProfile(transaction t) {
+    Customer c = customers.at(t.card);
+    c.profileCustomer();
+}

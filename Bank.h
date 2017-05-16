@@ -28,11 +28,12 @@ class Bank {
         string vendorTypeToString(vendorType v);
         void displayTransactionSummary(transaction t);
         bool detect(transaction t);
+        void assignTransaction(transaction t);
+        void updateCustomerProfile(transaction t);
     private:
         vector<string> splitRegex(string &s, string delim);
         bool parseOnline(string &s);
         vendorType parseVendorType(string &s);
-        void assignTransaction(transaction t);
 
         unordered_map<int, Customer> customers;
         FraudDetector * detector;
