@@ -23,14 +23,14 @@ class Bank {
         void displayCustomerInfo();
         void constructTree(vector<DecisionTree> &nodes);
         void showTree() { detector->showTree(); };
+        transaction newTransactionFromString(string &s);
+        string onlineToString(bool o);
+        string vendorTypeToString(vendorType v);
     private:
         void detect();
         vector<string> splitRegex(string &s, string delim);
-        transaction newTransactionFromString(string &s);
         bool parseOnline(string &s);
         vendorType parseVendorType(string &s);
-        string onlineToString(bool o);
-        string vendorTypeToString(vendorType v);
         void displayTransactionSummary(transaction t);
         void assignTransaction(transaction t);
 
