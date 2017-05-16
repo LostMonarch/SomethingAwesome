@@ -81,3 +81,8 @@ void FraudDetector::constructTree(vector<DecisionTree> &nodes) {
     // Set the fraud detector's root node
     setTree(node1);
 }
+
+// Given a new transaction, classify it's fraudulence
+bool FraudDetector::detect(transaction t, Customer c) {
+    return tree->classify(t, c);
+}

@@ -46,8 +46,14 @@ int main(int argc, char* argv[]) {
         newTransaction = b->newTransactionFromString(input);
         #if DISPLAY_NEW_TRANSACTIONS == 1
         b->displayTransactionSummary(newTransaction);
+        cout << "\n";
         #endif
-        b->detect(newTransaction);
+        bool isFraud = b->detect(newTransaction);
+        if(isFraud) {
+            cout << "Decision: FRAUD\n";
+        } else {
+            cout << "Decision: NOT FRAUD\n";
+        }
         cout << "\nPlease enter a new transaction: \n";
     }
 

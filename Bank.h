@@ -27,7 +27,7 @@ class Bank {
         string onlineToString(bool o);
         string vendorTypeToString(vendorType v);
         void displayTransactionSummary(transaction t);
-        void detect(transaction t);
+        bool detect(transaction t);
     private:
         vector<string> splitRegex(string &s, string delim);
         bool parseOnline(string &s);

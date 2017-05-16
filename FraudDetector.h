@@ -17,6 +17,7 @@ class FraudDetector {
         void setTree(DecisionTree * t);
         void constructTree(vector<DecisionTree> &nodes);
         void showTree();
+        bool detect(transaction t, Customer c);
     private:
         DecisionTree * tree;
         detectorTypeID typeID;

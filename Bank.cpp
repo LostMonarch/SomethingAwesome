@@ -231,6 +231,11 @@ void Bank::constructTree(vector<DecisionTree> &nodes) {
 }
 
 // Given a new transaction, decide whether or not it is fraudulent
-void Bank::detect(transaction t) {
-    
+bool Bank::detect(transaction t) {
+
+    // Get the corresponding customer for the new transaction
+    Customer c = customers.at(t.card);
+
+    // Make decision
+    return detector->detect(t, c);
 }
