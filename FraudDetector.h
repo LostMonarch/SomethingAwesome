@@ -15,6 +15,8 @@ class FraudDetector {
     public:
         FraudDetector(detectorTypeID i);
         void setTree(DecisionTree * t);
+        void constructTree(vector<DecisionTree> &nodes);
+        void showTree();
     private:
         DecisionTree * tree;
         detectorTypeID typeID;

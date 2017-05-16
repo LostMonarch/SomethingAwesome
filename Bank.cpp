@@ -223,3 +223,8 @@ void Bank::displayTransactionSummary(transaction t) {
 void Bank::assignTransaction(transaction t) {
     customers.at(t.card).addTransaction(t);
 }
+
+// Construct the Bank's decision tree
+void Bank::constructTree(vector<DecisionTree> &nodes) {
+    detector->constructTree(nodes);
+}

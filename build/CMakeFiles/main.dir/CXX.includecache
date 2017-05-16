@@ -71,6 +71,8 @@ DecisionTree.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.h
+iostream
+-
 transaction.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 Customer.h
@@ -105,6 +107,8 @@ iostream
 -
 Bank.h
 /Users/Connor/Documents/COMP3441/sap/COMP6441/Bank.h
+DecisionTree.h
+/Users/Connor/Documents/COMP3441/sap/COMP6441/DecisionTree.h
 
 /Users/Connor/Documents/COMP3441/sap/COMP6441/transaction.h
 vendorType.h

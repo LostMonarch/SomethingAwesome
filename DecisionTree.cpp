@@ -6,6 +6,7 @@
 #define RIGHT false
 #define FRAUD true
 #define NOT_FRAUD false
+#define CHILDREN_CONNECTED 2
 
 // Function prototypes for decision routines based on each attribute
 bool decide_vendorType(transaction t, Customer c);
@@ -21,14 +22,28 @@ bool decide_onlineChange(transaction t, Customer c);
 DecisionTree::DecisionTree(int nID, nodeTypeID tID) {
     nodeID = nID;
     typeID = tID;
+    leftChild = NULL;
+    rightChild = NULL;
 }
 
 // Add a new child to a decision tree node either on the left or on the right
 void DecisionTree::addChild(bool left, DecisionTree * c) {
     if(left) {
-        children[0] = c;
+        leftChild = c;
     } else {
-        children[1] = c;
+        rightChild = c;
+    }
+}
+
+// Sanity check method for making sure tree has been constructed correctly
+void DecisionTree::showTree() {
+    sayHi();
+    //cout << "Hi \n";
+    if((typeID != LEAF_FRAUD) && (typeID != LEAF_NOT_FRAUD)) {
+        if(leftChild && rightChild) {
+            leftChild->showTree();
+            rightChild->showTree();
+        }     
     }
 }
 
@@ -36,6 +51,9 @@ void DecisionTree::addChild(bool left, DecisionTree * c) {
 bool DecisionTree::classify(transaction t, Customer c) {
     bool ret;
     bool choose_child;
+
+    cout << "Node " << to_string(nodeID) << " deciding!\n";
+
     switch(typeID) {
         case VENDOR_TYPE:
             choose_child = decide_vendorType(t, c);
@@ -82,7 +100,7 @@ bool DecisionTree::classify(transaction t, Customer c) {
 // Given a boolean indicating whether we need to choose the left or right child, call classify recursively
 bool DecisionTree::classify_child(bool left, transaction t, Customer c) {
     bool ret;
-    ret = left ? children[0]->classify(t, c) : children[1]->classify(t, c);
+    ret = left ? leftChild->classify(t, c) : rightChild->classify(t, c);
     return ret;
 }
 

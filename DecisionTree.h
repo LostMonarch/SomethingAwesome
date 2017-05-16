@@ -2,6 +2,8 @@
 #ifndef DECISION_TREE_H_
 #define DECISION_TREE_H_
 
+#include <iostream>
+
 // Include header files for transactions and customers
 #include "transaction.h"
 #include "Customer.h"
@@ -27,11 +29,14 @@ class DecisionTree {
         DecisionTree(int nID, nodeTypeID tID);
         bool classify(transaction t, Customer c);
         void addChild(bool left, DecisionTree * c);
+        void sayHi() { cout << "My name is node " << to_string(nodeID) << "\n"; };
+        void showTree();
     private:
         bool classify_child(bool left, transaction t, Customer c);
         int nodeID;
         nodeTypeID typeID;
-        vector<DecisionTree *> children;
+        DecisionTree * leftChild;
+        DecisionTree * rightChild;
 };
 
 #endif

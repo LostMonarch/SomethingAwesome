@@ -21,6 +21,8 @@ class Bank {
         void addFraudDetector(detectorTypeID id);
         void trainFromFile(string f);
         void displayCustomerInfo();
+        void constructTree(vector<DecisionTree> &nodes);
+        void showTree() { detector->showTree(); };
     private:
         void detect();
         vector<string> splitRegex(string &s, string delim);
