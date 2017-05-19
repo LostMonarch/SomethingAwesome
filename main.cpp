@@ -11,16 +11,21 @@
 #define ADD_AND_PROFILE 1
 #define INPUT_FROM_FILE 1
 #define INDICATE_TRANSACTION 0
+#define GIVE_FEEDBACK 0
 #define RUNNING true
 
 int main(int argc, char* argv[]) {
     Bank * b = new Bank(DECISION_TREE);
 
     // Indicate that the fraud detection system is starting
+    #if GIVE_FEEDBACK == 1
     cout << "Starting credit card fraud detector...\n";
+    #endif
 
     // Use the first command line argument to add a list of customers to the bank
-    cout << "Adding customers...\n";    
+    #if GIVE_FEEDBACK == 1
+    cout << "Adding customers...\n";
+    #endif
     b->customersFromFile(argv[1]);
 
     // Summarise customers who are now part of the system
@@ -29,7 +34,9 @@ int main(int argc, char* argv[]) {
     #endif
 
     // Learn about the behaviour of each customer using a list of transactions - also known as customer profiling
+    #if GIVE_FEEDBACK == 1
     cout << "Using transaction history to learn about customers...\n";
+    #endif
     b->learnAboutCustomers(argv[2]);
 
     // Construct the system's decision tree (keep nodes in a vector to keep them in scope)
