@@ -77,7 +77,9 @@ int main(int argc, char* argv[]) {
     }
     #else
     // Read new transactions from a text file and classify them one by one - makes testing multiple transactions at once much easier
+    #if GIVE_FEEDBACK == 1
     cout << "Reading new transactions from file...\n";
+    #endif
     // Store lines of verification fil in a list
     ifstream input(argv[3]);
     vector<string> v;
