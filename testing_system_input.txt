@@ -1,30 +1,30 @@
-   1    1000     95        18:56     02/2018       Y          BILL              NOT FRAUD                            
-   1    1004     38        07:23     07/2018       N     RETAIL STANDARD        NOT FRAUD                            
-   1    1003     51        17:42     16/2018       N        HOUSEHOLD           NOT FRAUD                            
-   1    1010     76        13:37     25/2018       N     RETAIL STANDARD        NOT FRAUD                            
-   1    1000     85        20:35     31/2018       Y          BILL              NOT FRAUD                            
-   1    1003     49        11:58     39/2018       N     RETAIL STANDARD        NOT FRAUD                            
-   1    1003     2500      16:31     40/2018       N     RETAIL HIGH END          FRAUD                              
-   1    1005     480       10:20     43/2018       N     RETAIL HIGH END          FRAUD                              
-   1    1005     540       15:49     45/2018       N     HOSPITALITY HIGH         FRAUD                              
-   1    1008     3780      09:13     49/2018       N     HOSPITALITY HIGH         FRAUD                              
-   1    1000     79        21:25     57/2018       Y          BILL              NOT FRAUD                            
-   1    1000     82        14:47     64/2018       Y     RETAIL STANDARD        NOT FRAUD                            
-   1    1004     86        18:10     70/2018       N        HOUSEHOLD           NOT FRAUD                            
-   1    1000     48        21:40     75/2018       Y     RETAIL STANDARD        NOT FRAUD                            
-   1    1003     56        19:27     81/2018       N     RETAIL STANDARD        NOT FRAUD                            
-   1    1000     90        20:38     87/2018       Y          BILL              NOT FRAUD                            
-   1    1002     15        17:22     88/2018       Y     RETAIL STANDARD          FRAUD                              
-   1    1002     14        17:34     89/2018       Y     RETAIL STANDARD          FRAUD                              
-   1    1002     21        17:37     90/2018       Y     RETAIL STANDARD          FRAUD                              
-   1    1002     11        17:10     92/2018       Y     RETAIL STANDARD          FRAUD                              
-   1    1007     450       12:54     94/2018       N     RETAIL HIGH END          FRAUD                              
-   1    1008     2360      13:25     95/2018       N     HOSPITALITY HIGH         FRAUD                              
-   1    1008     670       14:02     97/2018       N     RETAIL HIGH END          FRAUD                              
-   1    1003     48        18:44     105/2018      N     RETAIL STANDARD        NOT FRAUD                            
-   1    1004     73        08:21     112/2018      Y        HOUSEHOLD           NOT FRAUD                            
-   1    1000     67        19:06     120/2018      N     RETAIL STANDARD        NOT FRAUD                            
-   1    1000     82        21:14     127/2018      Y          BILL              NOT FRAUD                            
-   1    1003     68        19:45     136/2018      N        HOUSEHOLD           NOT FRAUD                            
-   1    1008     840       09:18     138/2018      Y     HOSPITALITY HIGH         FRAUD                              
-   1    1008     1700      15:27     139/2018      N     RETAIL HIGH END          FRAUD                              
+1   1000    95      18:56   02/2018     1   BILL                                          
+1   1004    38      07:23   07/2018     0   RETAIL_STANDARD                                    
+1   1003    51      17:42   16/2018     0   HOUSEHOLD                                       
+1   1010    76      13:37   25/2018     0   RETAIL_STANDARD                                    
+1   1000    85      20:35   31/2018     1   BILL                                          
+1   1003    49      11:58   39/2018     0   RETAIL_STANDARD                                    
+1   1003    2500    16:31   40/2018     0   RETAIL_HIGH_END                                        
+1   1005    480     10:20   43/2018     0   RETAIL_HIGH_END                                        
+1   1005    540     15:49   45/2018     0   HOSPITALITY_HIGH_END                                       
+1   1008    3780    09:13   49/2018     0   HOSPITALITY_HIGH_END                                       
+1   1000    79      21:25   57/2018     1   BILL                                          
+1   1000    82      14:47   64/2018     1   RETAIL_STANDARD                                    
+1   1004    86      18:10   70/2018     0   HOUSEHOLD                                       
+1   1000    48      21:40   75/2018     1   RETAIL_STANDARD                                    
+1   1003    56      19:27   81/2018     0   RETAIL_STANDARD                                    
+1   1000    90      20:38   87/2018     1   BILL                                          
+1   1002    15      17:22   88/2018     1   RETAIL_STANDARD                                        
+1   1002    14      17:34   89/2018     1   RETAIL_STANDARD                                        
+1   1002    21      17:37   90/2018     1   RETAIL_STANDARD                                        
+1   1002    11      17:10   92/2018     1   RETAIL_STANDARD                                        
+1   1007    450     12:54   94/2018     0   RETAIL_HIGH_END                                        
+1   1008    2360    13:25   95/2018     0   HOSPITALITY_HIGH_END                                       
+1   1008    670     14:02   97/2018     0   RETAIL_HIGH_END                                        
+1   1003    48      18:44   105/2018    0   RETAIL_STANDARD                                    
+1   1004    73      08:21   112/2018    1   HOUSEHOLD                                       
+1   1000    67      19:06   120/2018    0   RETAIL_STANDARD                                    
+1   1000    82      21:14   127/2018    1   BILL                                          
+1   1003    68      19:45   136/2018    0   HOUSEHOLD                                       
+1   1008    840     09:18   138/2018    1   HOSPITALITY_HIGH_END                                       
+1   1008    1700    15:27   139/2018    0   RETAIL_HIGH_END                                        

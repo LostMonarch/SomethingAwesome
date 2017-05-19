@@ -7,6 +7,7 @@
 #define FRAUD true
 #define NOT_FRAUD false
 #define CHILDREN_CONNECTED 2
+#define INDICATE_WHEN_DECIDING 0
 
 // Function prototypes for decision routines based on each attribute
 bool decide_vendorType(transaction t, Customer c);
@@ -52,7 +53,9 @@ bool DecisionTree::classify(transaction t, Customer c) {
     bool ret;
     bool choose_child;
 
+    #if INDICATE_WHEN_DECIDING == 1
     cout << "Node " << to_string(nodeID) << " deciding!\n";
+    #endif
 
     switch(typeID) {
         case VENDOR_TYPE:

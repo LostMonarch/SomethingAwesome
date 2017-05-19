@@ -1,5 +1,6 @@
 // Behavioural credit card fraud detector - main routine
-#include <iostream>
+#include <sstream>
+#include <fstream>
 #include "Bank.h"
 #include "DecisionTree.h"
 
@@ -8,7 +9,8 @@
 #define DISPLAY_NEW_TRANSACTIONS 1
 #define EXIT 0
 #define ADD_AND_PROFILE 1
-#define INPUT_FROM_FILE 0
+#define INPUT_FROM_FILE 1
+#define INDICATE_TRANSACTION 0
 #define RUNNING true
 
 int main(int argc, char* argv[]) {
@@ -39,8 +41,8 @@ int main(int argc, char* argv[]) {
     b->showTree();
     #endif
 
-    // Wait for new transactions and classify them as they arrive
     #if INPUT_FROM_FILE == 0
+    // Wait for new transactions from the user and classify them as they arrive
     cout << "\nPlease enter a new transaction: \n";
     string input;
     transaction newTransaction;
@@ -58,16 +60,52 @@ int main(int argc, char* argv[]) {
             cout << "Decision: NOT FRAUD\n";
         }
         #if ADD_AND_PROFILE == 1
-        cout << "Updating cusomter profile with new transaction...\n"
         // Only update the customer's profile if the transaction was NOT fraudulent
-        b->assignTransaction(newTransaction);
         if(!isFraud) {
+            b->assignTransaction(newTransaction);
             b->updateCustomerProfile(newTransaction);
         }
         #endif
         cout << "\nPlease enter a new transaction: \n";
     }
+    #else
+    // Read new transactions from a text file and classify them one by one - makes testing multiple transactions at once much easier
+    cout << "Reading new transactions from file...\n";
+    // Store lines of verification fil in a list
+    ifstream input(argv[3]);
+    vector<string> v;
+	back_insert_iterator< vector<string> > backInserter = back_inserter(v);
+    // Read transaction list line by line
+    for(string line; getline(input, line);) {
+        *(backInserter++) = line;
+    }
+    // For each line, parse it by creating a new transaction, then indicate it's classification
+    vector<string>::iterator i;
+    transaction newTransaction;
+    int count = 0;
+    for(i = begin(v); i != end(v); ++i) {
+        count++;
+        string s = * i;
+        #if INDICATE_TRANSACTION == 1
+        cout << "Parsing transaction: " << to_string(count) << "\n";
+        #endif
+        newTransaction = b->newTransactionFromString(s);
+        bool isFraud = b->detect(newTransaction);
+        if(isFraud) {
+            cout << "Decision: FRAUD\n";
+        } else {
+            cout << "Decision: NOT FRAUD\n";
+        }
+        #if ADD_AND_PROFILE == 1
+        // Only update the customer's profile if the transaction was NOT fraudulent
+        if(!isFraud) {
+            b->assignTransaction(newTransaction);
+            b->updateCustomerProfile(newTransaction);
+        }
+        #endif
+    }
     #endif
 
+    // Finish
     return EXIT;
 }
