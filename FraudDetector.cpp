@@ -30,7 +30,7 @@ void FraudDetector::constructTree(vector<DecisionTree> &nodes) {
     DecisionTree * node5 = new DecisionTree(5, ONLINE_CHANGE);
     DecisionTree * node6 = new DecisionTree(6, VOLUME_DISTANCE);
     DecisionTree * node7 = new DecisionTree(7, FREQUENCY_THRESHOLD);
-    DecisionTree * node8 = new DecisionTree(8, FREQUENCY_DISTANCE);
+    DecisionTree * node8 = new DecisionTree(8, VOLUME_THRESHOLD);
     DecisionTree * nodeI = new DecisionTree(9, LEAF_NOT_FRAUD);
     DecisionTree * nodeII = new DecisionTree(10, LEAF_FRAUD);
     DecisionTree * nodeIII = new DecisionTree(11, LEAF_NOT_FRAUD);
@@ -75,8 +75,8 @@ void FraudDetector::constructTree(vector<DecisionTree> &nodes) {
     node6->addChild(RIGHT, nodeVI);
     node7->addChild(LEFT, node8);
     node7->addChild(RIGHT, nodeVII);
-    node8->addChild(LEFT, nodeVIII);
-    node8->addChild(RIGHT, nodeIX);
+    node8->addChild(RIGHT, nodeVIII);
+    node8->addChild(LEFT, nodeIX);
 
     // Set the fraud detector's root node
     setTree(node1);
