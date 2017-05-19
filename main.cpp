@@ -7,7 +7,7 @@
 #define SHOW_TREE 0
 #define DISPLAY_NEW_TRANSACTIONS 1
 #define EXIT 0
-#define ADD_AND_PROFILE 0
+#define ADD_AND_PROFILE 1
 #define RUNNING true
 
 int main(int argc, char* argv[]) {
