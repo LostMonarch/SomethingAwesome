@@ -8,6 +8,7 @@
 #define DISPLAY_NEW_TRANSACTIONS 1
 #define EXIT 0
 #define ADD_AND_PROFILE 1
+#define INPUT_FROM_FILE 0
 #define RUNNING true
 
 int main(int argc, char* argv[]) {
@@ -39,6 +40,7 @@ int main(int argc, char* argv[]) {
     #endif
 
     // Wait for new transactions and classify them as they arrive
+    #if INPUT_FROM_FILE == 0
     cout << "\nPlease enter a new transaction: \n";
     string input;
     transaction newTransaction;
@@ -57,11 +59,15 @@ int main(int argc, char* argv[]) {
         }
         #if ADD_AND_PROFILE == 1
         cout << "Updating cusomter profile with new transaction...\n"
+        // Only update the customer's profile if the transaction was NOT fraudulent
         b->assignTransaction(newTransaction);
-        b->updateCustomerProfile(newTransaction);
+        if(!isFraud) {
+            b->updateCustomerProfile(newTransaction);
+        }
         #endif
         cout << "\nPlease enter a new transaction: \n";
     }
+    #endif
 
     return EXIT;
 }
