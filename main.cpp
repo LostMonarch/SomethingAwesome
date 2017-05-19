@@ -68,8 +68,8 @@ int main(int argc, char* argv[]) {
         }
         #if ADD_AND_PROFILE == 1
         // Only update the customer's profile if the transaction was NOT fraudulent
+        b->assignTransaction(newTransaction);
         if(!isFraud) {
-            b->assignTransaction(newTransaction);
             b->updateCustomerProfile(newTransaction);
         }
         #endif

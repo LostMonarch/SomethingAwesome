@@ -26,7 +26,7 @@ void FraudDetector::constructTree(vector<DecisionTree> &nodes) {
     DecisionTree * node1 = new DecisionTree(1, VENDOR_TYPE);
     DecisionTree * node2 = new DecisionTree(2, ONLINE_THRESHOLD);
     DecisionTree * node3 = new DecisionTree(3, VOLUME_DISTANCE);
-    DecisionTree * node4 = new DecisionTree(4, VOLUME_THRESHOLD);
+    DecisionTree * node4 = new DecisionTree(4, LOCATION);
     DecisionTree * node5 = new DecisionTree(5, ONLINE_CHANGE);
     DecisionTree * node6 = new DecisionTree(6, VOLUME_DISTANCE);
     DecisionTree * node7 = new DecisionTree(7, FREQUENCY_THRESHOLD);
